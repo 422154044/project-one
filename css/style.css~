@@ -1,0 +1,331 @@
+
+#nav {
+	position:absolute;
+	height: 46px;
+	width: 99%;
+	background: #FFC600;
+	margin-top:13px;
+}
+#nav ul {
+	margin:0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#nav li {
+	float: left;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+}
+
+.a1 {
+	display: block;
+	width: 60px;
+	line-height: 36px;
+	height: 42px;
+	font-size:14px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #D03C3C;
+  	background:#f8f8f8;
+}
+.a1:hover {
+	color:  white;
+        background-color: #D03C3C;
+}
+.a2 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #737373;
+	background:#f8f8f8;
+}
+.a2:hover {
+	color:  white;
+        background: #737373;
+}
+.a4 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #A5443F;
+	background:#f8f8f8;
+}
+.a4:hover {
+	color:  white;
+        background: #A5443F;
+}
+.a5 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #1BBC9D;
+	background:#f8f8f8;
+}
+.a5:hover {
+	color:  white;
+        background: #1BBC9D;
+}
+.a6 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #E77E23;
+	background:#f8f8f8;
+}
+.a6:hover {
+	color:  white;
+        background: #E77E23;
+}
+.a7 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #FB3C91;
+	background:#f8f8f8;
+}
+.a7:hover {
+	color:  white;
+        background: #FB3C91;
+}
+.a8 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #8BC151;
+	background:#f8f8f8;
+}
+.a8:hover {
+	color:  white;
+        background: #8BC151;
+}
+.a9 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #9C59B8;
+	background:#f8f8f8;
+}
+.a9:hover {
+	color:  white;
+        background: #9C59B8;
+}
+.a10 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #3598DC;
+	background:#f8f8f8;
+}
+.a10:hover {
+	color:  white;
+        background: #3598DC;
+}
+.a11 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #8F9E15;
+	background:#f8f8f8;
+}
+.a11:hover {
+	color:  white;
+        background: #8F9E15;
+}
+.a12 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #F96DCD;
+	background:#f8f8f8;
+}
+.a12:hover {
+	color:  white;
+        background: #F96DCD;
+}
+.a13 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #DBBA00;
+	background:#f8f8f8;
+}
+.a13:hover {
+	color:  white;
+        background: #DBBA00;
+}
+.a14 {
+	display: block;
+	width: 56px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:  black;	
+	text-decoration: none;
+	border-top: 4px solid #0614D0;
+	background:#f8f8f8;
+}
+.a14:hover {
+	color:  white;
+        background: #0614D0;
+}
+.a15 {
+	display: block;
+	width: 125px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:   white;	
+	text-decoration: none;
+	border-top: 4px solid #f8f8f8;
+	background:#f8f8f8;
+}
+.a15:hover {
+	color:  white;
+        background:  #f8f8f8;
+}
+.a16 {
+	display: block;
+	width: 87px;
+	height: 42px;
+	font-size:14px;
+	line-height: 36px;
+	color:   black;	
+	text-decoration: none;
+	border-top: 4px solid #D03C3C;
+	background:#f8f8f8;
+}
+.a16:hover {
+	color:  white;
+        background: #D03C3C;
+}
+#nav li ul {
+  line-height: 24px; 
+  list-style-type: none;
+  text-align: left;
+  left: -9999px;
+  width: 56px; //注意,这里一定要设置宽度;
+  position: relative;
+  background: #CCC;
+}
+#nav li ul li {
+  width: 112px; //float就是子菜单横向的关键,可以继承父菜单而省略float
+}
+
+
+#nav li ul a {
+  width: 112px;
+  text-align:left;
+  padding-left: 10px;
+}
+
+#nav li ul a:link  {
+ color:#F8f8f8; text-decoration:none;
+}
+#nav li ul a:visited  {
+ color: black; text-decoration:none;font-size:14px;
+}
+#nav li ul a:hover {
+ color: #FFF;
+ text-decoration: none;
+ font-weight: normal;
+}
+
+#nav li:hover ul {
+  left:0%;
+}
+
+#nav li.sfhover ul {
+  left: 0%;
+}
+
+.con{
+  height: 30px;
+  width: 112px;
+  overflow: hidden;
+  position: relative;
+  background: black; 
+}
+.nav_u{
+  height: 26px;
+  font: 15px/16px "宋体";
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  padding-top: 10px;
+}
+.nav_d{
+  height:30px;
+  font:12px/12px "宋体";
+  color:#333;
+  position:relative;
+}
+.pos{
+  position:relative;
+  left:0px;
+}
+.con a{
+  text-decoration:none;
+  display: block;
+  color: black;
+} 
+.nav_ub{
+  width: 112px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  background: #f8f8f8;
+}
+.nav_db{
+  width:112px;
+  height:14px;
+  position:absolute;
+  bottom:0px;
+  background:#f8f8f8;
+}

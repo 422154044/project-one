@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<head>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/lrtk.css"> 
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/mosaic.1.0.1.js"></script>
+	<script type="text/javascript" src="js/lrtk.js"></script> 
+
+	<style>
+		.content_2{ 
+			height: 400px; 
+		}
+		.content{margin: 0px 0px 0px 0px; 
+			width: 100%; 
+			height: 350px;
+			padding: 10px; 
+			overflow: auto;
+		}
+		.content p:nth-child(even){
+			color:#999;
+			font-family:Georgia,serif;
+			font-size:17px;
+		}
+		.content p:nth-child(3n+0){
+			color:#cc0033;
+		}
+		.content_2{
+			float:left;
+		}
+		.content form{
+			margin-bottom:20px;
+		}
+		.content form input{
+			color: #eee;
+			border: none;
+			background: rgba(0,0,0,0.2);
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 0px;
+			margin-bottom: 10px;
+			padding: 0 5px;
+			height: 25px;
+			width: 180px;
+			-webkit-box-shadow:inset 2px 2px 10px rgba(0,0,0,0.4), 1px 1px 0 rgba(255,255,255,0.4);
+			-moz-box-shadow:inset 2px 2px 10px rgba(0,0,0,0.4), 1px 1px 0 rgba(255,255,255,0.4);
+			box-shadow:inset 2px 2px 10px rgba(0,0,0,0.4), 1px 1px 0 rgba(255,255,255,0.4);
+		}
+		.content form input:focus{
+			background:rgba(0,0,0,0.3);
+		}
+	</style>
+
+	<title>gigacircle</title>
+	</head>
+	<body>
+		<script>
+		$(document).ready(function(){
+			$(".con").prepend('<div class="nav_ub"></div><div class="nav_db"></div>')
+			$(".con").hover(function(){
+				$(this).children(".nav_ub").stop().animate({top:-26},300);
+				$(this).find(".pos").stop().animate({left:30},250);
+				$(this).children(".nav_db").stop().animate({bottom:-14},300);
+				$(this).find(".pos").stop().animate({left:30},250);
+			},function(){
+				$(this).children(".nav_ub").stop().animate({top:0},300);
+				$(this).find(".pos").stop().animate({left:0},20);
+				$(this).children(".nav_db").stop().animate({bottom:0},300);
+				$(this).find(".pos").stop().animate({left:0},20);
+			});
+		})
+		</script>
+		
+		
+		
+		<div id="wrapper">
+
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div class="container">
+							<ol class="breadcrumb">
+								<li><a href="#">客服中心</a></li>
+								<li><a href="#">频道表</a></li>
+								<li><a href="#">分类</a></li>
+								<li><a href="#">抽奖</a></li>
+								<li><a href="#">爱心公益</a></li>
+							</ol>
+							<ol class="breadcrumb2">
+								<li><a href="#">注册</a></li>
+								<li><a href="#">登入</a></li>
+							</ol>
+						</div><!-- /.container -->
+						<div class="container">
+							<div class="navbar-inner">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="logo-left">
+											<a href="#" class="extrabold" title="Giga Circle">
+												<img src="./Giga Circle - 創作分享平台_files/logo.png" width="283" height="36" alt="Giga Circle">
+											</a> 
+										</div><!-- /.logo-left -->
+									</div><!-- /.col-lg-6 -->
+									<div class="col-lg-3">
+										<div style="float: right;">
+											<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-gbp"></span></button>
+										</div>
+									</div><!-- /.col-lg-3 -->
+									<div class="col-lg-3">
+										<form>
+											<div class="input-group">
+											
+												<input type="text" class="form-control"  placeholder="搜尋文章">
+												<span class="input-group-btn">
+													<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												</span>
+											
+											</div><!-- /input-group -->
+										</form>
+									</div><!-- /.col-lg-3 -->
+								</div><!-- /.row -->
+
+								<div class="row">
+									<div class="col-lg-12">
+										<div id="nav" style="padding-top:4px;">
+											<ul>
+												<li>
+													<a href="#" class="a1">首頁</a>
+												</li>
+												<li>
+													<a href="#" class="a2">熱門</a>
+												</li>
+												<li>
+													<a href="#" class="a2">最新</a>
+												</li>
+												<li>
+													<a href="#" class="a4">新聞</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a5">奇趣</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a6">故事</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>	
+													<a href="#" class="a7">正妹</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a8">生活</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a9">短片</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a10">科技</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a11">兴趣</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a12">娱乐</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a13">运动</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="#" class="a14">帮助</a>
+													<ul style="z-index:1000;">
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">時事新聞</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">其他資訊</a></div>
+														</li>
+														<li class="con">
+															<div class="nav_u"><a class="pos" href="#">投資理財</a></div>
+														</li>
+													</ul>
+												</li>
+
+												<li>
+													<a href="#" class="a15"></a>
+												</li>
+												<li>
+													<a href="#" class="a16">发文赚钱</a>
+												</li>
+											</ul>
+										</div>
+									</div><!-- /.col-lg-12 -->	
+								</div><!-- /.row -->	
+							</div><!-- /.navbar-inner -->
+						</div><!-- /.container -->	
+						
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+
+
+			<div id="content">
+				<div class="container">
+					<div class="content-inner">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="left-one">
+									<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+										<ol class="carousel-indicators">
+											<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+											<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+											<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+										</ol>
+										<div class="carousel-inner left-img" role="listbox">
+											<div class="item active ">
+												<img src="./Giga Circle - 創作分享平台_files/480x320_s4_53f20087448c8.jpg" alt="什麼？這樣就可以治好便秘！！！治便秘妙方成本不用一塊錢！（快快來看！鐵定收藏）" style="width:520px; height:320px;">
+												<div class="carousel-caption">
+													<a href="#"><strong>什麼？這樣就可以治好便秘！！！治便秘妙方成本不用一塊錢！（快快來看！鐵定收藏）</strong></a>
+												</div>
+											</div><!-- /.item active -->
+											<div class="item">
+												<img src="./Giga Circle - 創作分享平台_files/480x320_s4_53f2156f2dd7a.jpg" alt="柯震东被抓， 房祖名肯能被判死刑。。。 不潔身自愛，很多事都沒話講了......." style="width:520px; height:320px;">
+												<div class="carousel-caption">
+													<a href="#" title="柯震东被抓， 房祖名肯能被判死刑。。。 不潔身自愛，很多事都沒話講了......."><strong>柯震东被抓， 房祖名肯能被判死刑。。。 不潔身自愛，很多事都沒話講了.......</strong></a>
+												</div>
+											</div><!-- /.item -->
+											<div class="item">
+												<img src="./Giga Circle - 創作分享平台_files/480x320_s2_a671ac284d32c9d68584edd3ce4b08c0.jpg" alt="兒子把唯一雞腿掉在土裡，媽媽怒打兒子說浪費，知道真相後媽媽痛哭流涕.............."  style="width:520px; height:320px;">
+												<div class="carousel-caption">
+													<a href="#" title="兒子把唯一雞腿掉在土裡，媽媽怒打兒子說浪費，知道真相後媽媽痛哭流涕.............."><strong>兒子把唯一雞腿掉在土裡，媽媽怒打兒子說浪費，知道真相後媽媽痛哭流涕..............</strong></a>
+												</div>
+											</div><!-- /.item -->
+										</div><!-- /.carousel-inner -->
+										<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+											<span class="glyphicon glyphicon-chevron-left"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div><!-- /.carousel-example-generic -->
+								</div><!-- /.left-one -->
+
+								<div class="left-two">
+									<h3> <span class="label label-default">，精選內容</span></h3>
+	
+									<div class="left-two-padding">
+										<div class="row">
+
+											<div class="col-lg-6">
+
+												<div class="col-sm-12 col-md-10 left-two-one">
+													<div class="thumbnail">
+														<div class="post-thumb">
+															<a href="#" title="女性必看：不隨便的淫蕩" >
+																<img src="./Giga Circle - 創作分享平台_files/220x150_s4_53f1c7204b7d4.jpg" alt="女性必看：不隨便的淫蕩" class="img-thumbnail"  style="width: 225px; height: 150px;">
+															</a>
+															<span class="category-title">
+																<a class="catcolor1" href="#">兩性話題</a>
+															</span>
+														</div>
+														<div class="caption">
+															<h4 class="entry-title">
+																<a href="#" title="女性必看：不隨便的淫蕩">女性必看：不隨便的淫蕩</a>
+															</h4>
+															<p>妳總是覺得沒有人好好愛妳，是因為那些賤男人一但感覺妳的身體很廉價就不會珍惜妳其實彌足珍貴的真心。</p>
+															<p><span><a href="#">艾姬</a></span><span class="meta-sep"> | </span>379</p>
+														</div><!-- /.caption -->
+													</div><!-- /.thumbnail -->
+												</div><!-- /.col-sm-12 col-md-12 -->
+												<div class="col-sm-12 col-md-10 left-two-one">
+													<div class="thumbnail">
+														<div class="post-thumb">
+															<a href="#" title="超級時尚的西瓜蛋糕~!! ((簡單學起來!!">
+																<img src="./Giga Circle - 創作分享平台_files/0.jpg" alt="超級時尚的西瓜蛋糕~!! ((簡單學起來!!" class="img-thumbnail"  style="width:225px; height:150px;">
+															</a>
+															<span class="category-title">
+																<a class="catcolor1" href="#">廚藝烹飪</a>
+															</span>
+														</div>
+														<div class="caption">
+															<h4 class="entry-title">
+																<a href="#" title="超級時尚的西瓜蛋糕~!! ((簡單學起來!!">超級時尚的西瓜蛋糕~!! ((簡單學起來!!</a>
+															</h4>
+															<p>只要準備西瓜一顆~ 優質鮮奶油一瓶~看清楚影片,很輕鬆地就可以學起來啦!!</p>
+															<p><span><a href="#">vivianlisa</a></span><span class="meta-sep"> | </span>201</p>
+														</div>
+													</div>
+												</div><!-- /.col-sm-12 col-md-12 -->
+												<div class="col-sm-12 col-md-10 left-two-one">
+													<div class="thumbnail">
+														<div class="post-thumb">
+															<a href="#" title="巴里島火山奇景">
+																<img src="./Giga Circle - 創作分享平台_files/220x150_s2_53f2003c9e293.jpg" alt="巴里島火山奇景" class="img-thumbnail"  style="width:225px; height:150px;">
+															</a>
+															<span class="category-title">
+																<a class="catcolor1" href="#">旅遊資訊</a>
+															</span>
+														</div>
+														<div class="caption">
+															<h4 class="entry-title">
+																<a href="#" title="巴里島火山奇景">巴里島火山奇景</a>
+															</h4>
+															<p>看見火山肆虐過後的生命力</p>
+															<p><span><a href="#">小老虎</a></span><span class="meta-sep"> | </span>45</p>
+														</div>
+													</div>
+												</div><!-- /.col-sm-12 col-md-12 -->
+
+											</div><!-- /.col-lg-6 -->
+
+											<div class="col-lg-6"">
+
+												<div class="col-sm-12 col-md-10 left-two-one">
+													<div class="thumbnail">
+														<div class="post-thumb">
+															<a href="#" title="10种只有马来西亚人懂的事! 台湾,香港,中国,美国,泰国其他等都不懂!">
+																<img src="./Giga Circle - 創作分享平台_files/220x150_s2_53f24f019c4cf.jpg" alt="10种只有马来西亚人懂的事! 台湾,香港,中国,美国,泰国其他等都不懂!" class="img-thumbnail"  style="width:225px; height:150px;">
+															</a>
+															<span class="category-title">
+																<a class="catcolor1" href="#">生活百科</a>
+															</span>
+														</div>
+														<div class="caption">
+															<h4 class="entry-title">
+																<a href="#" title="10种只有马来西亚人懂的事! 台湾,香港,中国,美国,泰国其他等都不懂!">10种只有马来西亚人懂的事! 台湾,香港,中国,美国,泰国其他等都不懂!</a>
+															</h4>
+															<p>马来西亚人是一种特别人的人种，我们的一举一动都是有别于全世界！</p>
+															<p><span><a href="#">爆料黨</a></span><span class="meta-sep"> | </span>209</p>
+														</div>
+													</div>
+												</div><!-- /.col-sm-6 col-md-6 -->
+												<div class="col-sm-12 col-md-10 left-two-one" >
+													<div class="thumbnail">
+														<div class="post-thumb">
+															<a href="#" title="男友他媽的媽見到女友他媽的爸叫什麼？">
+																<img src="./Giga Circle - 創作分享平台_files/220x150_s4_53f2074113711.jpg" alt="男友他媽的媽見到女友他媽的爸叫什麼？" class="img-thumbnail"  style="width:225px; height:150px;">
+															</a>
+															<span class="category-title">
+																<a class="catcolor1" href="#">生活百科</a>
+															</span>
+														</div>
+														<div class="caption">
+															<h4 class="entry-title">
+																<a href="#" title="男友他媽的媽見到女友他媽的爸叫什麼？">男友他媽的媽見到女友他媽的爸叫什麼？</a>
+															</h4>
+															<p>剪不斷，理還亂</p>
+															<p><span><a href="#">小妮子</a></span><span class="meta-sep"> | </span>140</p>
+														</div>
+													</div>
+												</div><!-- /.col-sm-12 col-md-12 -->
+												<div class="col-sm-12 col-md-10 left-two-one">
+													<div class="thumbnail">
+														<div class="post-thumb">
+															<a href="#" title="【分享】老黃的生日禮物--Daniel Wellington紳士錶款">
+																<img src="./Giga Circle - 創作分享平台_files/220x150_s4_ee30d3ac2852592415de87a47c4b939c.jpg" alt="【分享】老黃的生日禮物--Daniel Wellington紳士錶款" class="img-thumbnail"  style="width:225px; height:150px;">
+															</a>
+															<span class="category-title">
+																<a class="catcolor1" href="#">創意設計</a>
+															</span>
+														</div>
+														<div class="caption">
+															<h4 class="entry-title">
+																<a href="#" title="【分享】老黃的生日禮物--Daniel Wellington紳士錶款">【分享】老黃的生日禮物--Daniel Wellington紳士錶款</a>
+															</h4>
+															<p>簡單就是雋永，經典就是百搭。</p>
+															<p><span><a href="#">Amys talk 愛米愛你</a></span><span class="meta-sep"> | </span>44</p>
+														</div>
+													</div>
+												</div><!-- /.col-sm-12 col-md-12 -->
+
+											</div><!-- /.col-lg-6 -->
+
+										</div><!-- /.row -->
+									</div><!-- /.left-two-padding -->
+									<div class="col-sm-6 col-md-6 col-xs-offset-2">
+										<form style="margin-left: 50px;">
+											<div class="input-group">
+												<input type="text" class="form-control"  placeholder="全台購物網站搜尋比價">
+												<span class="input-group-btn">
+													<button class="btn btn-default1" type="button"><span class="glyphicon glyphicon-search"></span></button>
+												</span>
+											
+											</div><!-- /input-group -->
+										</form>
+										<div style="display:inline-block">
+											<a href="#" target="_blank" class="feebee">Feebee 飛比價格</a>
+										</div>
+									</div>
+								</div><!-- /.left-two -->
+
+								<div class="left-three">
+									<h3> <span class="label label-default">＇文章分類</span></h3>
+									<div class="left-three-content">
+										<div class="blogcat">
+											<h3>話題</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s1-1">時事新聞</a></li>
+												<li><a href="http://tw.gigacircle.com/s26-1">投資理財</a></li>
+												<li><a href="http://tw.gigacircle.com/s11-1">其他資訊</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+										<h3>正妹</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s31-1">正妹美眉</a></li>
+												<li><a href="http://tw.gigacircle.com/s32-1">日韓美女</a></li>
+												<li><a href="http://tw.gigacircle.com/s33-1">歐美美女</a></li>
+												<li><a href="http://tw.gigacircle.com/s34-1">明星寫真</a></li>
+												<li><a href="http://tw.gigacircle.com/s35-1">型男帥哥</a></li>
+												<li><a href="http://tw.gigacircle.com/s64-1">正妹短片</a></li>
+												<li><a href="http://tw.gigacircle.com/s8-1">其他正妹</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>興趣</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s12-1">汽車機車</a></li>
+												<li><a href="http://tw.gigacircle.com/s15-1">動漫同人</a></li>
+												<li><a href="http://tw.gigacircle.com/s42-1">攝影技術</a></li>
+												<li><a href="http://tw.gigacircle.com/s41-1">模型資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s40-1">軍事資訊</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>運動</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s36-1">籃球資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s37-1">棒球資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s38-1">足球資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s7-1">其他運動</a></li>
+												<li><a href="http://tw.gigacircle.com/s39-1">運動貼圖</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>奇趣</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s27-1">奇趣貼圖</a></li>
+												<li><a href="http://tw.gigacircle.com/s30-1">搞笑貼圖</a></li>
+												<li><a href="http://tw.gigacircle.com/s14-1">惡搞圖集</a></li>
+												<li><a href="http://tw.gigacircle.com/s29-1">驚悚恐怖</a></li>
+												<li><a href="http://tw.gigacircle.com/s3-1">奇趣資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s2-1">其他爆笑</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>生活</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s17-1">生活百科</a></li>
+												<li><a href="http://tw.gigacircle.com/s24-1">醫療健康</a></li>
+												<li><a href="http://tw.gigacircle.com/s22-1">兩性話題</a></li>
+												<li><a href="http://tw.gigacircle.com/s48-1">女性專區</a></li>
+												<li><a href="http://tw.gigacircle.com/s21-1">男性話題</a></li>
+												<li><a href="http://tw.gigacircle.com/s49-1">心情日記</a></li>
+												<li><a href="http://tw.gigacircle.com/s18-1">星座占卜</a></li>
+												<li><a href="http://tw.gigacircle.com/s20-1">心理測驗</a></li>
+												<li><a href="http://tw.gigacircle.com/s58-1">旅遊資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s59-1">創意設計</a></li>
+												<li><a href="http://tw.gigacircle.com/s60-1">寵物資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s63-1">廚藝烹飪</a></li>
+												<li><a href="http://tw.gigacircle.com/s67-1">美食推薦</a></li>
+												<li><a href="http://tw.gigacircle.com/s65-1">命理專區</a></li>
+												<li><a href="http://tw.gigacircle.com/s68-1">親子婦幼</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>科技</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s10-1">數位科技</a></li>
+												<li><a href="http://tw.gigacircle.com/s6-1">電玩資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s45-1">手機平板</a></li>
+												<li><a href="http://tw.gigacircle.com/s46-1">硬體資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s47-1">軟體資訊</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>文學</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s13-1">長短小說</a></li>
+												<li><a href="http://tw.gigacircle.com/s4-1">愛情傷悲</a></li>
+												<li><a href="http://tw.gigacircle.com/s23-1">激勵感人</a></li>
+												<li><a href="http://tw.gigacircle.com/s5-1">驚悚故事</a></li>
+												<li><a href="http://tw.gigacircle.com/s19-1">笑話大集</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>娛樂</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s16-1">狗仔八卦</a></li>
+												<li><a href="http://tw.gigacircle.com/s44-1">綜藝節目</a></li>
+												<li><a href="http://tw.gigacircle.com/s25-1">電影資訊</a></li>
+												<li><a href="http://tw.gigacircle.com/s9-1">音樂資訊</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>短片</h3>
+											<ul>
+												<li><a href="http://tw.gigacircle.com/s50-1">爆笑短片</a></li>
+												<li><a href="http://tw.gigacircle.com/s51-1">音樂短片</a></li>
+												<li><a href="http://tw.gigacircle.com/s52-1">惡搞短片</a></li>
+												<li><a href="http://tw.gigacircle.com/s53-1">汽機短片</a></li>
+												<li><a href="http://tw.gigacircle.com/s54-1">其他短片</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+										<div class="clr"></div>
+										<div class="blogcat">
+											<h3>幫助</h3>
+											<ul>
+												<li><a href="http://support.gigacircle.com/hc/zh-tw/categories/200169440-Giga-Circle-%E9%87%8D%E8%A6%81%E5%85%AC%E5%91%8A">網站公告</a></li>
+												<li><a href="http://support.gigacircle.com/hc/communities/public/topics">問題建議</a></li>
+												<li><a href="http://tw.gigacircle.com/s61-1">教學文章</a></li>
+												<li><a href="http://tw.gigacircle.com/s62-1">付款證明</a></li>
+												<li><a href="http://tw.gigacircle.com/coshare.html">文章共推</a></li>
+											</ul>
+										</div><!-- /.blogcat -->
+									</div><!-- /.left-three-content -->
+								</div><!-- /.left-three -->
+								<div class="left-four">
+									<h3> <span class="label label-default">,公益廣告</span></h3>
+									
+									<div style="padding:5px 20px">
+										<a href="http://www.tzhu.org.tw/wwwupload/event/" target="_blank">
+											<img src="./Giga Circle - 創作分享平台_files/charity250x70.gif" width="250" height="70">
+										</a>
+										<div class="clr" style=" margin-bottom:10px;"></div>
+										<a href="http://web.syinlu.org.tw/help/donate_us/" target="_blank" style="padding-right:15px;">
+											<img src="./Giga Circle - 創作分享平台_files/charity_banner250_2.jpg" width="210" height="60">
+										</a>
+										<a href="http://www.genesis.org.tw/news-detail.php?nid=353" target="_blank">
+											<img src="./Giga Circle - 創作分享平台_files/charity_banner250_1.jpg" width="210" height="60">
+										</a>
+									</div>
+									
+								</div>
+	
+
+							</div><!-- /.col-lg-6 -->
+							<div class="col-lg-3">
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">醫療健康</p>
+													<p class="fonth4">原來腸道不健康，皮膚就粗糙 !教您如何讓腸道更健康的方法</p>
+													<p class="fonth2strong">原來腸道不健康，皮膚就粗糙 !教您如何讓腸道更健康的方法</p>
+													<p class="fonth2">在說明五臟六腑和皮膚的關係時，要把「肺-大腸-皮毛」這三部位連成一條線，因為體內循環經絡系統中的肺經 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2e0c2bc0c0.jpg" alt="原來腸道不健康，皮膚就粗糙 !教您如何讓腸道更健康的方法" />
+											</div>
+										</div>
+									</div>
+									
+								</div><!-- /.center-inner -->
+
+								<div class="center-inner">
+									
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">一見鐘情！韓國女總統樸槿惠會見阿裏巴巴董事局主席馬雲</p>
+													<br>
+													<p class="fonth2strong">一見鐘情！韓國女總統樸槿惠會見阿裏巴巴董事局主席馬雲</p>
+													<p class="fonth2">韓國總統樸槿惠昨天(18日)下午在總統府青瓦臺接見了到訪的中國阿裏巴巴集團董事局主席馬雲,雙方就中韓 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s4_53f2ff5d9a371.jpg" alt="一見鐘情！韓國女總統樸槿惠會見阿裏巴巴董事局主席馬雲" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">生活百科</p>
+													<p class="fonth4">46句「我愛你」！轉給你愛的和愛你的人！.</p>
+													<br>
+													<p class="fonth2strong">46句「我愛你」！轉給你愛的和愛你的人！.</p>
+													<p class="fonth2">生活加油站 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2f00a19c17.jpg" alt="46句「我愛你」！轉給你愛的和愛你的人！." />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">投資理財</p>
+													<p class="fonth4">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<br>
+													<p class="fonth2strong">賣草賺錢！奧巴馬通過新政策增加出口就業！</p>
+													<p class="fonth2">牧草價格的攀升同時也成為了日本生乳漲價的原因之壹。日本乳業生產商還計劃擡高奶酪等乳制品的價格。《日本 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2fba10a107.jpg" alt="賣草賺錢！奧巴馬通過新政策增加出口就業！" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">生活百科</p>
+													<p class="fonth4">46句「我愛你」！轉給你愛的和愛你的人！.</p>
+													<br>
+													<p class="fonth2strong">46句「我愛你」！轉給你愛的和愛你的人！.</p>
+													<p class="fonth2">生活加油站 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2f00a19c17.jpg" alt="46句「我愛你」！轉給你愛的和愛你的人！." />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">生活百科</p>
+													<p class="fonth4">46句「我愛你」！轉給你愛的和愛你的人！.</p>
+													<br>
+													<p class="fonth2strong">46句「我愛你」！轉給你愛的和愛你的人！.</p>
+													<p class="fonth2">生活加油站 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2f00a19c17.jpg" alt="46句「我愛你」！轉給你愛的和愛你的人！." />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="center-inner">
+									<div id="content1"> 
+										<div class="mosaic-block bar2">
+											<a href="#" target="_blank" class="mosaic-overlay">
+												<div class="details">
+														
+													<p class="fonth1">生活百科</p>
+													<p class="fonth4">46句「我愛你」！轉給你愛的和愛你的人！.</p>
+													<br>
+													<p class="fonth2strong">46句「我愛你」！轉給你愛的和愛你的人！.</p>
+													<p class="fonth2">生活加油站 ...</p>
+													
+												</div>
+											</a>
+											<div class="mosaic-backdrop">
+												<img src="./Giga Circle - 創作分享平台_files/260x147_s2_53f2f00a19c17.jpg" alt="46句「我愛你」！轉給你愛的和愛你的人！." />
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="col-lg-3">
+								<div class="right-inner">
+									<div class="right-one">
+										<div class="right-one-title">
+											<a href="#"><span class="right-one-font">本周熱門</span></a>
+										</div><!-- /.right-one-title -->
+										<div class="right-one-content content_2 content">
+											<div class="right-one-a ">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！" >
+														<font>辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">喜歡給個讚</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>30277</p>
+											</div><!-- /.right-one-a -->
+											<div class="right-one-a">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！" >
+														<font>辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">喜歡給個讚</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>30277</p>
+											</div><!-- /.right-one-a -->
+											<div class="right-one-a">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！" >
+														<font>辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">喜歡給個讚</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>30277</p>
+											</div><!-- /.right-one-a -->
+											<div class="right-one-a">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！" >
+														<font>辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">喜歡給個讚</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>30277</p>
+											</div><!-- /.right-one-a -->
+											<div class="right-one-a">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！" >
+														<font>辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">喜歡給個讚</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>30277</p>
+											</div><!-- /.right-one-a -->
+										</div><!-- /.right-one-content -->
+									</div><!-- /.right-one -->
+
+
+									<div class="right-two">
+										<div class="right-two-title">
+											<a href="#"><span class="right-two-font">熱門共推</span></a>
+										</div><!-- /.right-two-title -->
+										<div class="right-two-content content_2 content">
+											<div class="right-two-a ">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="女性必看：不隨便的淫蕩" >
+														<font>女性必看：不隨便的淫蕩</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">艾姬</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>379</p>
+											</div><!-- /.right-two-a -->
+											<div class="right-two-a ">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="女性必看：不隨便的淫蕩" >
+														<font>女性必看：不隨便的淫蕩</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">艾姬</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>379</p>
+											</div><!-- /.right-two-a -->
+											<div class="right-two-a">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！" >
+														<font>辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">喜歡給個讚</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>30277</p>
+											</div><!-- /.right-one-a -->
+											<div class="right-two-a">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！" >
+														<font>辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">喜歡給個讚</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>30277</p>
+											</div><!-- /.right-two-a -->
+											<div class="right-two-a">
+												<span class="entry-title">
+													<a href="#" class="catcolor3" title="辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！" >
+														<font>辣妹醉酒路邊眾男節操大考驗，第2個開始就嚇人了！</font>
+													</a>
+												</span>
+												<p style="color: white;font-size:12px;"><span><a href="#" class="catcolor2">喜歡給個讚</a></span><span class="meta-sep"> &nbsp;&nbsp;|&nbsp;&nbsp; </span>30277</p>
+											</div><!-- /.right-two-a -->
+										</div><!-- /.right-two-content -->
+									</div><!-- /.right-two -->
+
+									<div class="right-three">
+										<div class="right-three-title">
+											<a href="#"><span class="right-three-font">作者排行</span></a>
+											<div class="right-three-content">
+												<div class="right-three-a">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+																
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="全能分享王" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_s1_53cd49148cdcc.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_5378cd7774059.png" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_s1_5391f96b950ed.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+														</div><!-- /.col-lg-3 -->
+														<div class="col-md-3">
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+														</div><!-- /.col-lg-3 -->
+														<div class="col-md-3">
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+														</div><!-- /.col-lg-3 -->
+														<div class="col-md-3">
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+														</div><!-- /.col-lg-3 -->
+												</div><!-- /.row -->
+											</div><!-- /.right-three-a -->
+
+										</div><!-- /.right-three-title -->
+									</div><!-- /.right-three -->
+									<div class="right-four">
+										<h3> <span class="label label-default">，資深作者</span></h3>
+										
+											<div class="right-four-a">
+												<div class="row">
+													<div class="col-md-3">
+														<div class="right-four-img">
+															<div class="thumbnail">
+																<div class="post-thumb2">
+																	<a href="#" title="女性必看：不隨便的淫蕩" >
+																		<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																	</a>
+																</div>
+																
+															</div><!-- /.thumbnail -->
+														</div>
+														<div class="right-four-img">
+															<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+														</div>
+													</div><!-- /.col-lg-3 -->
+
+													<div class="col-md-3">
+														<div class="right-three-img">
+															<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+														</div>
+														<div class="right-four-img">
+															<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+														</div>
+													</div><!-- /.col-lg-3 -->
+
+													<div class="col-md-3">
+														<div class="right-three-img">
+															<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+														</div>
+														<div class="right-four-img">
+															<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+														</div>
+													</div><!-- /.col-lg-3 -->
+
+													<div class="col-md-3">
+														<div class="right-three-img">
+															<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+														</div>
+														<div class="right-four-img">
+															<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+														</div>
+													</div><!-- /.col-lg-3 -->
+												</div>
+											</div>
+											
+										</div>
+									</div><!-- /.right-four -->
+									<div class="right-five">
+										<div class="right-five-title">
+											<a href="#"><span class="right-three-font">加入 Giga Circle 作者行列</span></a>
+											<div class="right-five-content">
+												<div class="right-five-a">
+													<div style="box-sizing:border-box;">
+<p>Giga Circle 讓您擁有自己的線上頻道，您可以在您頻道內新增任何文章、圖片、或影片。每當有人造訪您的文章，我們還會給您現金收益!</p>
+<p style="text-indent:2em;"><strong>專屬部落格頻道</strong><br>在本站發表精采文章、圖片、或影片，不論您是親自撰寫或合法轉載均可。</p>
+<p style="text-indent:2em;"><strong>推廣您的文章</strong><br>在臉書、部落格、或其他網站推廣您發表的內文，使其他網友訪問您發表之內容。</p>
+<p style="text-indent:2em;"><strong>獲取收益</strong><br>每個點閱都可賺取現金，越多人閱讀您的文章您賺得越多!</p>
+<p><button type="button" class="btn btn-warning">馬上註冊</button></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div><!-- /.right-five -->
+									<div class="right-six">
+										<div class="right-six-title">
+											<a href="#"><span class="right-six-font"> Facebook 粉絲頁</span></a>
+											<div class="right-six-content">
+												<div style="padding:0px; box-sizing:border-box;height:50px;">
+													<img src="./Giga Circle - 創作分享平台_files/1907589_387434964729487_1243337054_n.png" style="padding:5px;">
+													<span><a href="#">Giga Circle</a></span>
+													<hr>
+													<span class="right-six-span">24,886 people like <a href="#">Giga Circle.</a></span>
+												</div>
+												<div class="right-six-a">
+													<div class="row">
+														<div class="col-md-3">
+															<div class="right-four-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-four-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+														</div><!-- /.col-lg-3 -->
+
+														<div class="col-md-3">
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-four-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+														</div><!-- /.col-lg-3 -->
+
+														<div class="col-md-3">
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-four-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+														</div><!-- /.col-lg-3 -->
+
+														<div class="col-md-3">
+															<div class="right-three-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+															<div class="right-four-img">
+																<div class="thumbnail">
+																	<div class="post-thumb2">
+																		<a href="#" title="女性必看：不隨便的淫蕩" >
+																			<img src="./Giga Circle - 創作分享平台_files/55x55_536f456689b3a.jpg" style="opacity: 0.9;height:50px;width:50px;" class="img-thumbnail">
+																		</a>
+																	</div>
+																	
+																</div><!-- /.thumbnail -->
+															</div>
+														</div><!-- /.col-lg-3 -->
+													</div><!-- /.row -->
+													<hr>
+													<span class="right-six-span"><a href="#">Facebook social plugin</a></span>
+												</div><!-- /.right-six-a -->
+												
+											</div><!-- /.right-six-content -->
+										</div>
+									</div>
+
+								</div><!-- /.right-inner -->
+							</div><!-- /.col-lg-3 -->
+						</div><!-- /.row -->
+					</div><!-- /.content-inner -->
+				</div><!-- /.container -->	
+			</div><!-- /.content -->	
+			<div id="footer">
+				<div class="container">
+					<div class="footer-inner">
+						<div class="row">
+							<div class="col-lg-3 " >
+								<div class="sep_small"></div>
+								<h4 class="footer-h4">導引</h4>
+								<ul class="footernav">
+									<li><a href="#" class="menu_navigation"><span>首頁</span></a></li>
+									<li><a href="#"><span>熱門</span></a></li>
+									<li><a href="http://tw.gigacircle.com/category.html"><span>分類</span></a></li>
+									<li><a href="http://tw.gigacircle.com/channel.html"><span>頻道</span></a></li>
+									<li><a href="http://tw.gigacircle.com/publisher.html"><span>發表文章</span></a></li>
+									<li><a href="http://support.gigacircle.com/hc/zh-tw"><span>客服中心</span></a></li>
+									<li><a href="http://support.gigacircle.com/hc/zh-tw/requests/new"><span>聯絡我們</span></a></li>
+								</ul>
+							</div><!-- /.col-lg-3 -->
+							<div class="col-lg-4">
+								<div class="sep_small"></div>
+								<h4 class="footer-h4">關於 Giga Circle</h4>
+								<p class="footer-p"> Giga Circle 為創新娛樂部落格平台，供大家發表個人創作，增加個人作品曝光率。本站蒐羅了來自各方作家們的精彩文章、圖片及影片。無時無刻都有會員提供最新內容，歡迎大家多多拜訪!<br>
+								</p>
+								<br>
+							</div><!-- /.col-lg-4 -->
+							<div class="col-lg-4"">
+								<div class="sep_small"></div>
+								<h4 class="footer-h4">Giga Circle 網路賺錢</h4>
+								<p class="footer-p">在本站發表文章或創作可讓您賺取豐厚收入。加入會員為完全免費，註冊後您會擁有自己的部落格頻道，並可立即發表文章，每當有用戶點閱您發表的文章您即可賺取現金! <br><a href="#" class="footer-a">了解更多</a>
+								</p>
+								<br>
+							</div><!-- /.col-lg-4 -->
+
+						</div><!-- /.row -->
+					</div><!-- /.footer-inner -->
+				</div><!-- /.container -->
+			</div><!-- /.footer -->
+
+		</div><!-- /.wrapper -->
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+		<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script>
+			(function($){
+				$(window).load(function(){
+					/* custom scrollbar fn call */
+					
+					$(".content_2").mCustomScrollbar({
+						scrollInertia:150
+					});
+					
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>
